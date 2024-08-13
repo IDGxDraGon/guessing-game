@@ -65,6 +65,7 @@ function endgame() {
   the_input.value = "";
   the_input.setAttribute("disabled", "");
   submit_button.setAttribute("disabled", "");
+  submit_button.style.left = "70px";
   p.classList.add("button");
   p.innerHTML = `<button id="newgame">Start New Game!</button>`;
   startover.appendChild(p);
@@ -89,6 +90,7 @@ function newgame() {
     remaining.innerHTML = `${11 - numguesses}`;
     the_input.removeAttribute("disabled");
     submit_button.removeAttribute("disabled");
+    submit_button.style.left = "130px";
     startover.removeChild(p);
     play = true;
   });
