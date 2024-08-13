@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main_div">
+      <h1>Number Guessing Game</h1>
+      <h2>
+        Try to guess the the number betwean<br />
+        <span id="n1">1</span> & <span id="n100">100</span> !!
+      </h2>
+      <h2>
+        You have just <span id="n10">10</span> attemps to guess the number
+        <span id="right">right!</span>
+      </h2>
+      <div id="input_div">
+        <form>
+          <label for="the_number">Guess the Number here...</label><br />
+          <input type="number" id="the_number" value="1" /> <br />
+          <button type="submit" id="submit">Submit!</button>
+        </form>
+        <div id="warning_low" class="warning">1 is the minimum number!</div>
+        <div id="warning_high" class="warning">100 is the maximum number!</div>
+      </div>
+      <div id="result">
+        <h3>Your last Guesses :<br /><span class="guesses"></span></h3>
+        <h2><span class="lastresult">10</span> Left !</h2>
+        <h2 class="loworhi"></h2>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

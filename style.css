@@ -1,0 +1,191 @@
+@font-face {
+  font-family: "Anton";
+  src: url("fonts/Anton-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "KalniaGlaze";
+  src: url("fonts/KalniaGlaze-VariableFont_wdth_wght.ttf") format("truetype");
+}
+
+* {
+  font-family: cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  background-image: url(guesses-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Anton", sans-serif;
+  overflow: hidden;
+}
+
+#main_div {
+  background-color: rgba(73, 73, 73, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  width: 40vw;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 11cm;
+  top: 2cm;
+  gap: 10px;
+}
+
+h1,
+h2,
+h3,
+label {
+  color: white;
+  font-family: cursive;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h1 {
+  color: black;
+  text-shadow: -1px -1px 0 gray, 1px -1px 0 gray, -1px 1px 0 gray,
+    1px 1px 0 gray;
+}
+
+#result h2 {
+  color: red;
+  text-shadow: 0px 0px 15px rgb(255, 60, 60);
+}
+
+#n1 {
+  color: aqua;
+}
+
+#n10 {
+  color: red;
+}
+
+#n100 {
+  color: rgb(0, 191, 255);
+}
+
+#right {
+  color: lime;
+}
+
+label {
+  color: yellow;
+  font-size: xx-large;
+}
+
+input[type="number"] {
+  margin-top: 20px;
+  width: 40%;
+  padding: 5px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  font-size: 16px;
+  position: relative;
+  left: 110px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"]:focus {
+  outline: none;
+}
+
+.warning {
+  color: white;
+  font-size: 26px;
+  display: none;
+  margin-top: 10px;
+  text-shadow: -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red, 1px 1px 0 red;
+  position: relative;
+  left: 30px;
+}
+.shake {
+  animation: shake 0.5s;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+button {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 2px;
+  border: 3px black ridge;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  width: 3cm;
+  height: 1cm;
+  font-size: large;
+  position: relative;
+  left: 130px;
+}
+
+#submit {
+  background-color: rgb(153, 255, 0);
+  color: black;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+}
+
+#submit:hover {
+  background-color: lime;
+  color: white;
+  transform: scale(1.1);
+}
+
+#submit:active {
+  background-color: limegreen;
+  color: black;
+  transform: scale(0.9);
+}
+
+#newgame {
+  background-color: rgb(153, 255, 0);
+  color: black;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out,
+    color 0.2s ease-in-out, opacity 0.5s ease-in-out;
+  display: none;
+  opacity: 0;
+}
+
+#newgame:hover {
+  background-color: lime;
+  color: white;
+  transform: scale(1.1);
+}
+
+#newgame:active {
+  background-color: limegreen;
+  color: black;
+  transform: scale(0.9);
+}
